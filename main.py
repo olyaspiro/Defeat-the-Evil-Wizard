@@ -61,7 +61,6 @@ def battle(player, wizard):
         else:
             print("Invalid choice, you skip your turn!\n")
 
-        # Wizard's turn: only attack if player still alive
         if wizard.health > 0 and player.health > 0:
             input("\nPress Enter for the Wizard's Turn...")
             print("\nWizard's Turn")
@@ -70,7 +69,6 @@ def battle(player, wizard):
             wizard.attack(player)
             total_damage_taken += max(0, before - player.health)
 
-    # Move victory/defeat message here after battle ends
     if player.health <= 0:
         print(f"\n{player.name} has been defeated! Game Over.\n")
     elif wizard.health <= 0:
