@@ -1,5 +1,4 @@
 from characters import Warrior, Mage, Archer, Paladin, EvilWizard
-import time  
 
 def create_character():
     print("Choose your character class:")
